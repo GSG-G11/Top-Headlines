@@ -1,0 +1,19 @@
+{
+  "name": "top-headlines",
+  "version": "1.0.0",
+  "description": "Show last news worldwide with/without category select (general, business, entertainment, health, science, sports, technology)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSG-G11/Top-Headlines.git"
+  },
+  "author": "Yosra Jaradh, Ibrahim Jarada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSG-G11/Top-Headlines/issues"
+  },
+  "homepage": "https://github.com/GSG-G11/Top-Headlines#readme"
+}
