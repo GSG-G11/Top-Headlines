@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root { 
+    --main-color: #8f0158;
+    --second-color: #e8e8e8;
+    --header-font-size: 30px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    height: 80px;
+    width: 100%;
+    background-color: var(--second-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.home-btn, .dark-mode-btn{
+    font-size: 25px;
+    border: none;
+    background-color: var(--second-color);
+}
+
+button{
+    cursor: pointer;
+}
+.fa-sun{
+    color: gold;
+}
