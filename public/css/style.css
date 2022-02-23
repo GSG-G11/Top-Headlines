@@ -33,6 +33,12 @@ header{
 button{
     cursor: pointer;
 }
-.fa-sun{
+
+.dark-mode-body{
+    background-color: gray;
+}
+
+.dark-mode-header{
     color: gold;
+    background-color:rgb(96, 96, 96)
 }

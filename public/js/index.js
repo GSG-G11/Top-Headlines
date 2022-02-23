@@ -1,12 +1,19 @@
 const darkModeBtn = document.querySelector('.dark-mode-btn');
 const homeBtn = document.querySelector('.home-btn');
+const header =document.querySelector('#header')
+const body =document.querySelector('body')
 darkModeBtn.addEventListener('click', () => {
   darkModeBtn.querySelector('i').classList.toggle('fa-moon');
   darkModeBtn.querySelector('i').classList.toggle('fa-sun');
+  body.classList.toggle('dark-mode-body');
+
+  header.classList.toggle('dark-mode-header');
+  darkModeBtn.classList.toggle('dark-mode-header');
+  homeBtn.classList.toggle('dark-mode-header');
 });
 homeBtn.addEventListener('click', () => {
   // eslint-disable-next-line no-restricted-globals
-  location.href = `${location.origin}public`;
+  location.href = `${location.origin}/`;
 });
 
 // eslint-disable-next-line no-unused-vars
