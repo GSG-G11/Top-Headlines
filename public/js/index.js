@@ -1,7 +1,7 @@
 const darkModeBtn = document.querySelector('.dark-mode-btn');
 const homeBtn = document.querySelector('.home-btn');
-const header =document.querySelector('#header')
-const body =document.querySelector('body')
+const header = document.querySelector('#header');
+const body = document.querySelector('body');
 darkModeBtn.addEventListener('click', () => {
   darkModeBtn.querySelector('i').classList.toggle('fa-moon');
   darkModeBtn.querySelector('i').classList.toggle('fa-sun');
@@ -16,7 +16,6 @@ homeBtn.addEventListener('click', () => {
   location.href = `${location.origin}/`;
 });
 
-// eslint-disable-next-line no-unused-vars
 const createCard = ({
   source, title, url, urlToImage,
 }) => {
@@ -50,10 +49,19 @@ const createCard = ({
 
 const main = document.querySelector('.main');
 const handleFirstSixItems = (data) => {
+  if (data.articles.length === 0) {
+    const notResultContainer = document.createElement('div');
+    notResultContainer.style.width = '100vw';
+    notResultContainer.style.display = 'flex';
+    notResultContainer.style.justifyContent = 'center';
+    const notResult = document.createElement('img');
+    notResult.src = '../images/no-result.jpg';
+    notResultContainer.appendChild(notResult);
+    return main.appendChild(notResultContainer);
+  }
   let element;
   for (let i = 0; i < Math.min(data.articles.length, 6); i += 1) {
     element = data.articles[i];
-    // eslint-disable-next-line no-undef
     main.appendChild(createCard(element));
   }
 };
