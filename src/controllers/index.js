@@ -1,4 +1,4 @@
-const generalPage = require('./generalPage');
+const getCategory = require('./getCategory');
 const { notFoundError, serverError } = require('./error');
 const handleSearch = require('./handleSearch');
 const handleBusiness = require('./handleBusiness');
@@ -10,7 +10,7 @@ const handleSports = require('./handleSports');
 const handleTechnology = require('./handleTechnology');
 
 module.exports = {
-  generalPage,
+  getCategory,
   notFoundError,
   serverError,
   handleSearch,
