@@ -43,9 +43,9 @@ form{
     }
     .card{
         width: 32%;
-        flex-direction: row;
     }
     .img{
-        width: 50%;
+        height: 100%;
+        width: auto;
     }
   }
