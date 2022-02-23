@@ -8,6 +8,8 @@ const handleHealth = require('./handleHealth');
 const handleScience = require('./handleScience');
 const handleSports = require('./handleSports');
 const handleTechnology = require('./handleTechnology');
+const handleCategoryPage = require('./handleCategoryPage');
+const handleSearchPage = require('./handleSearchPage');
 
 module.exports = {
   getCategory,
@@ -21,4 +23,6 @@ module.exports = {
   handleScience,
   handleSports,
   handleTechnology,
+  handleCategoryPage,
+  handleSearchPage,
 };
