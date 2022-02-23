@@ -1,9 +1,11 @@
 const category = require('express').Router();
 const {
+  handleCategoryPage,
   handleBusiness, handleEntertainment, handleGeneral,
   handleHealth, handleScience, handleSports, handleTechnology,
 } = require('../../controllers');
 
+category.get('/', handleCategoryPage);
 category.get('/business', handleBusiness);
 category.get('/entertainment', handleEntertainment);
 category.get('/general', handleGeneral);
