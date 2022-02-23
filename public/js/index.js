@@ -19,7 +19,7 @@ const createCard = ({
   imgContainer.classList.add('img');
   const img = document.createElement('img');
   imgContainer.appendChild(img);
-  img.src = urlToImage || '';// fallback img need to be set
+  img.src = urlToImage || '../images/news-img.jpg';// fallback img
   const infoContainer = document.createElement('div');
   infoContainer.classList.add('info');
   const sourceP = document.createElement('p');
