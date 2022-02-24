@@ -49,19 +49,30 @@ const createCard = ({
 
 const main = document.querySelector('.main');
 const handleFirstSixItems = (data) => {
-  if (data.articles.length === 0) {
+  if (data.status === 'ok') {
+    if (data.articles.length === 0) {
+      const notResultContainer = document.createElement('div');
+      notResultContainer.style.width = '100vw';
+      notResultContainer.style.display = 'flex';
+      notResultContainer.style.justifyContent = 'center';
+      const notResult = document.createElement('img');
+      notResult.src = '../images/no-result.jpg';
+      notResultContainer.appendChild(notResult);
+      return main.appendChild(notResultContainer);
+    }
+    let element;
+    for (let i = 0; i < Math.min(data.articles.length, 6); i += 1) {
+      element = data.articles[i];
+      main.appendChild(createCard(element));
+    }
+  } else {
     const notResultContainer = document.createElement('div');
     notResultContainer.style.width = '100vw';
     notResultContainer.style.display = 'flex';
     notResultContainer.style.justifyContent = 'center';
     const notResult = document.createElement('img');
-    notResult.src = '../images/no-result.jpg';
+    notResult.src = '../images/503.jpg';
     notResultContainer.appendChild(notResult);
     return main.appendChild(notResultContainer);
-  }
-  let element;
-  for (let i = 0; i < Math.min(data.articles.length, 6); i += 1) {
-    element = data.articles[i];
-    main.appendChild(createCard(element));
   }
 };
