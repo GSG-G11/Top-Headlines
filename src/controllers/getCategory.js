@@ -1,6 +1,8 @@
 const fetch = require('node-fetch');
 const { serverError } = require('./error');
-const getCategory = (category) => (req, res, next) => {
+
+const getCategory = (req, res, next) => {
+  const {category} = req.params;
   fetch(
     `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${process.env.apiKey}`,
   )
